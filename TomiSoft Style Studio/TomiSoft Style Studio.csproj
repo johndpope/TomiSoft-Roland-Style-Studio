@@ -38,6 +38,9 @@
     <Reference Include="Roland Style Reader">
       <HintPath>..\..\RolandStyleReader\Roland Style Reader\Roland Style Reader\bin\Debug\Roland Style Reader.dll</HintPath>
     </Reference>
+    <Reference Include="Sanford.Multimedia">
+      <HintPath>..\Sanford Midi Toolkit\Sanford.Multimedia.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +61,12 @@
     </Compile>
     <Compile Include="Forms\frmMainWindow.Designer.cs">
       <DependentUpon>frmMainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmWelcome.cs">
       <SubType>Form</SubType>
@@ -121,6 +130,9 @@
     <EmbeddedResource Include="Forms\Dialogs\NewStyleDialog.resx">
       <DependentUpon>NewStyleDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmStartupScreen.resx">
       <DependentUpon>frmStartupScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sanford Midi Toolkit\Sanford.Multimedia.Midi.csproj">
+      <Project>{4269c72a-8d3a-4737-8f89-72eaa33ea9e1}</Project>
+      <Name>Sanford.Multimedia.Midi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

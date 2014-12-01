@@ -64,5 +64,10 @@ namespace TomiSoft_Style_Studio {
 				dlg.ShowDialog(this);
 			}
 		}
+
+		private void optionsToolStripMenuItem_Click(object sender, EventArgs e) {
+			Form dlg = new frmOptions();
+			dlg.ShowDialog(this);
+		}
 	}
 }

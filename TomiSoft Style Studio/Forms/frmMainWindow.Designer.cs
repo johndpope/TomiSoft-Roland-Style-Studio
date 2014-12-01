@@ -29,9 +29,9 @@
 			this.openStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tooldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.miAbout = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
@@ -82,7 +82,7 @@
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(170, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -91,12 +91,6 @@
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-			// 
-			// windowsToolStripMenuItem
-			// 
-			this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-			this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-			this.windowsToolStripMenuItem.Text = "Windows";
 			// 
 			// tooldToolStripMenuItem
 			// 
@@ -111,6 +105,13 @@
 			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
 			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.optionsToolStripMenuItem.Text = "Options";
+			this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+			// 
+			// windowsToolStripMenuItem
+			// 
+			this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
+			this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+			this.windowsToolStripMenuItem.Text = "Windows";
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -123,7 +124,7 @@
 			// miAbout
 			// 
 			this.miAbout.Name = "miAbout";
-			this.miAbout.Size = new System.Drawing.Size(152, 22);
+			this.miAbout.Size = new System.Drawing.Size(107, 22);
 			this.miAbout.Text = "About";
 			this.miAbout.Click += new System.EventHandler(this.miAbout_Click);
 			// 
