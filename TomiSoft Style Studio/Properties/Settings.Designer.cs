@@ -22,5 +22,29 @@ namespace TomiSoft_Style_Studio.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MidiOutputDeviceID {
+            get {
+                return ((int)(this["MidiOutputDeviceID"]));
+            }
+            set {
+                this["MidiOutputDeviceID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MidiInputDeviceID {
+            get {
+                return ((int)(this["MidiInputDeviceID"]));
+            }
+            set {
+                this["MidiInputDeviceID"] = value;
+            }
+        }
     }
 }

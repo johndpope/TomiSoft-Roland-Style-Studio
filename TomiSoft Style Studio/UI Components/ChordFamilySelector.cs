@@ -20,7 +20,7 @@ namespace TomiSoft_Style_Studio {
 			}
 		}
 
-		public event EventHandler<ChordType> ChordFamilyChanged;
+		public event EventHandler<ChordTypeEventArgs> ChordFamilyChanged;
 
 		public ChordFamilySelector() {
 			InitializeComponent();
@@ -42,7 +42,7 @@ namespace TomiSoft_Style_Studio {
 		private void OnChordChanged(ChordType t) {
 			this.chord = t;
 			if (this.ChordFamilyChanged != null) {
-				this.ChordFamilyChanged(this, t);
+				this.ChordFamilyChanged(this, new ChordTypeEventArgs(t));
 			}
 		}
 	}

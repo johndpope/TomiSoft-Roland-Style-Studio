@@ -18,11 +18,15 @@ namespace TomiSoft_Style_Studio {
 			Form Startup = new frmStartupScreen();
 			Startup.Show();
 
-			Thread.Sleep(2000);
+			Properties.Settings s = new Properties.Settings();
+			MidiOutputHandler.Initialize(s.MidiOutputDeviceID);
 
+			Thread.Sleep(2000);
 			Startup.Close();
 
 			Application.Run(new frmMainWindow());
+
+			MidiOutputHandler.DisposeInstance();
 		}
 	}
 }

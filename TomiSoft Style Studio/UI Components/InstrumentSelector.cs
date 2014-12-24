@@ -20,7 +20,7 @@ namespace TomiSoft_Style_Studio {
 			}
 		}
 
-		public event EventHandler<Instrument> InstrumentChanged;
+		public event EventHandler<InstrumentEventArgs> InstrumentChanged;
 
 		public InstrumentSelector() {
 			InitializeComponent();
@@ -47,7 +47,7 @@ namespace TomiSoft_Style_Studio {
 		private void OnChanged(Instrument i) {
 			this.selectedInstr = i;
 			if (this.InstrumentChanged != null)
-				this.InstrumentChanged(this, i);
+				this.InstrumentChanged(this, new InstrumentEventArgs(i));
 		}
 	}
 }
