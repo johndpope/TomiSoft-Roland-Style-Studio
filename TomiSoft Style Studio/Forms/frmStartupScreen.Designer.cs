@@ -24,7 +24,19 @@
 		/// </summary>
 		private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartupScreen));
+			this.lStatus = new System.Windows.Forms.Label();
 			this.SuspendLayout();
+			// 
+			// lStatus
+			// 
+			this.lStatus.AutoSize = true;
+			this.lStatus.BackColor = System.Drawing.Color.Transparent;
+			this.lStatus.ForeColor = System.Drawing.Color.White;
+			this.lStatus.Location = new System.Drawing.Point(12, 475);
+			this.lStatus.Name = "lStatus";
+			this.lStatus.Size = new System.Drawing.Size(52, 13);
+			this.lStatus.TabIndex = 0;
+			this.lStatus.Text = "Starting...";
 			// 
 			// frmStartupScreen
 			// 
@@ -32,6 +44,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(300, 500);
+			this.Controls.Add(this.lStatus);
 			this.Cursor = System.Windows.Forms.Cursors.AppStarting;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "frmStartupScreen";
@@ -39,10 +52,13 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Label lStatus;
 	}
 }
 
