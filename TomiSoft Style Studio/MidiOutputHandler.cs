@@ -27,7 +27,12 @@ namespace TomiSoft_Style_Studio {
 			MidiOutputHandler.Instance.Dispose();
 		}
 
-		private OutputDevice Device;
+		private OutputDevice device;
+		public OutputDevice Device {
+			get {
+				return this.device;
+			}
+		}
 
 		private MidiOutputHandler(int DeviceID) {
 			this.ReinitializeDevice(DeviceID);
@@ -37,8 +42,8 @@ namespace TomiSoft_Style_Studio {
 			this.Dispose();
 
 			try {
-				this.Device = OutputDevice.InstalledDevices[NewOutputDeviceID];
-				this.Device.Open();
+				this.device = OutputDevice.InstalledDevices[NewOutputDeviceID];
+				this.device.Open();
 			}
 			catch {
 				System.Windows.Forms.MessageBox.Show("Hiba a MIDI kimeneti eszköz inicializálásakor");
@@ -46,17 +51,17 @@ namespace TomiSoft_Style_Studio {
 		}
 
 		public void Dispose() {
-			if (this.Device != null) {
-				this.Device.Close();
+			if (this.device != null) {
+				this.device.Close();
 			}
 		}
 
 		public void SendQuickNoteOnMessage(int BankMSB, int BankLSB, int Program, int MidiChannel, int Note) {
-			Device.SendControlChange((Channel)MidiChannel, Control.DataEntryMSB, BankMSB);
-			Device.SendControlChange((Channel)MidiChannel, Control.DataEntryLSB, BankLSB);
-			Device.SendProgramChange((Channel)MidiChannel, (Instrument)Program);
+			device.SendControlChange((Channel)MidiChannel, Control.DataEntryMSB, BankMSB);
+			device.SendControlChange((Channel)MidiChannel, Control.DataEntryLSB, BankLSB);
+			device.SendProgramChange((Channel)MidiChannel, (Instrument)Program);
 
-			Device.SendNoteOn((Channel)MidiChannel, (Pitch)Note, 127);
+			device.SendNoteOn((Channel)MidiChannel, (Pitch)Note, 127);
 
 			//Device.Send(new ChannelMessage(ChannelCommand.Controller, MidiChannel, 0, BankMSB));
 			//Device.Send(new ChannelMessage(ChannelCommand.Controller, MidiChannel, 32, BankLSB)); //Bank select
@@ -66,7 +71,7 @@ namespace TomiSoft_Style_Studio {
 		}
 
 		public void SendQuickNoteOffMessage(int MidiChannel, int Note) {
-			Device.SendNoteOff((Channel)MidiChannel, (Pitch)Note, 0);
+			device.SendNoteOff((Channel)MidiChannel, (Pitch)Note, 0);
 		}
 	}
 }

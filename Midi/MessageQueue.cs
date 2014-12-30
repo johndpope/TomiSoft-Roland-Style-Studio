@@ -49,6 +49,9 @@ namespace Midi
         /// returned by PopEarliest().
         public void AddMessage(Message message)
         {
+			if (message == null)
+				return;
+
             // If the list is empty or message is later than any message we already have, we can add this
             // as a new timeslice to the end.
             if (IsEmpty || message.Time > messages.Last.Value[0].Time)

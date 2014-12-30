@@ -167,5 +167,19 @@ namespace TomiSoft_Style_Studio {
 				}
 			}
 		}
+
+		private void btnPlayInstrument_Click(object sender, EventArgs e) {
+			var Result = from c in this.Data.data
+						 where
+							c.Arrangement == this.SelectedArrangement &&
+							c.ChordType == this.SelectedChordFamily &&
+							c.Instrument == this.SelectedInstrument &&
+							c.Part == this.SelectedPart
+						 select c;
+
+			MidiPlaybackDialog dlg = new MidiPlaybackDialog(this.Data.Measure, this.Data.Tempo, Result);
+			dlg.Show(this);
+			dlg.Play();
+		}
 	}
 }

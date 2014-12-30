@@ -100,8 +100,19 @@
     <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageScheduler.cs" />
+    <Compile Include="MidiMessagePlayer.cs" />
     <Compile Include="MidiOutputHandler.cs" />
+    <Compile Include="Forms\Dialogs\MidiPlaybackDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\MidiPlaybackDialog.Designer.cs">
+      <DependentUpon>MidiPlaybackDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="UI Components\CustomProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI Components\InstrumentEventArgs.cs" />
     <Compile Include="UI Components\ChordTypeEventArgs.cs" />
     <Compile Include="UI Components\ChordFamilySelector.cs">
@@ -160,6 +171,9 @@
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\MidiPlaybackDialog.resx">
+      <DependentUpon>MidiPlaybackDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -172,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="UI Components\ChordFamilySelector.resx">
       <DependentUpon>ChordFamilySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\CustomProgressBar.resx">
+      <DependentUpon>CustomProgressBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Components\InstrumentSelector.resx">
       <DependentUpon>InstrumentSelector.cs</DependentUpon>

@@ -30,7 +30,9 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.cfsChord = new TomiSoft_Style_Studio.ChordFamilySelector();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.isInstrument = new TomiSoft_Style_Studio.InstrumentSelector();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.rbPartEnding = new System.Windows.Forms.RadioButton();
 			this.rbPartFillToOriginal = new System.Windows.Forms.RadioButton();
@@ -41,7 +43,7 @@
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.rbArrangementAdvanced = new System.Windows.Forms.RadioButton();
 			this.rbArrangementBasic = new System.Windows.Forms.RadioButton();
-			this.btnPlay = new System.Windows.Forms.Button();
+			this.btnPlayPart = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.label4 = new System.Windows.Forms.Label();
@@ -64,9 +66,7 @@
 			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.button1 = new System.Windows.Forms.Button();
-			this.cfsChord = new TomiSoft_Style_Studio.ChordFamilySelector();
-			this.isInstrument = new TomiSoft_Style_Studio.InstrumentSelector();
+			this.btnPlayInstrument = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -134,7 +134,7 @@
 			this.groupBox1.Controls.Add(this.groupBox2);
 			this.groupBox1.Controls.Add(this.groupBox7);
 			this.groupBox1.Controls.Add(this.groupBox6);
-			this.groupBox1.Controls.Add(this.btnPlay);
+			this.groupBox1.Controls.Add(this.btnPlayPart);
 			this.groupBox1.Location = new System.Drawing.Point(12, 3);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(175, 502);
@@ -152,6 +152,13 @@
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Chord family";
 			// 
+			// cfsChord
+			// 
+			this.cfsChord.Location = new System.Drawing.Point(6, 19);
+			this.cfsChord.Name = "cfsChord";
+			this.cfsChord.Size = new System.Drawing.Size(48, 64);
+			this.cfsChord.TabIndex = 0;
+			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.isInstrument);
@@ -161,6 +168,13 @@
 			this.groupBox2.TabIndex = 5;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Instruments";
+			// 
+			// isInstrument
+			// 
+			this.isInstrument.Location = new System.Drawing.Point(3, 16);
+			this.isInstrument.Name = "isInstrument";
+			this.isInstrument.Size = new System.Drawing.Size(62, 186);
+			this.isInstrument.TabIndex = 0;
 			// 
 			// groupBox7
 			// 
@@ -272,14 +286,14 @@
 			this.rbArrangementBasic.Text = "Basic (Combo)";
 			this.rbArrangementBasic.UseVisualStyleBackColor = true;
 			// 
-			// btnPlay
+			// btnPlayPart
 			// 
-			this.btnPlay.Location = new System.Drawing.Point(6, 472);
-			this.btnPlay.Name = "btnPlay";
-			this.btnPlay.Size = new System.Drawing.Size(164, 23);
-			this.btnPlay.TabIndex = 1;
-			this.btnPlay.Text = "Play selected part";
-			this.btnPlay.UseVisualStyleBackColor = true;
+			this.btnPlayPart.Location = new System.Drawing.Point(6, 472);
+			this.btnPlayPart.Name = "btnPlayPart";
+			this.btnPlayPart.Size = new System.Drawing.Size(164, 23);
+			this.btnPlayPart.TabIndex = 1;
+			this.btnPlayPart.Text = "Play selected part";
+			this.btnPlayPart.UseVisualStyleBackColor = true;
 			// 
 			// panel2
 			// 
@@ -400,7 +414,7 @@
 			this.groupBox3.Controls.Add(this.button4);
 			this.groupBox3.Controls.Add(this.button3);
 			this.groupBox3.Controls.Add(this.lwMessages);
-			this.groupBox3.Controls.Add(this.button1);
+			this.groupBox3.Controls.Add(this.btnPlayInstrument);
 			this.groupBox3.Location = new System.Drawing.Point(6, 159);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Size = new System.Drawing.Size(609, 410);
@@ -483,29 +497,16 @@
 			// 
 			this.columnHeader5.Text = "Data3";
 			// 
-			// button1
+			// btnPlayInstrument
 			// 
-			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.button1.Location = new System.Drawing.Point(529, 18);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Play";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// cfsChord
-			// 
-			this.cfsChord.Location = new System.Drawing.Point(6, 19);
-			this.cfsChord.Name = "cfsChord";
-			this.cfsChord.Size = new System.Drawing.Size(48, 64);
-			this.cfsChord.TabIndex = 0;
-			// 
-			// isInstrument
-			// 
-			this.isInstrument.Location = new System.Drawing.Point(3, 16);
-			this.isInstrument.Name = "isInstrument";
-			this.isInstrument.Size = new System.Drawing.Size(62, 186);
-			this.isInstrument.TabIndex = 0;
+			this.btnPlayInstrument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnPlayInstrument.Location = new System.Drawing.Point(529, 18);
+			this.btnPlayInstrument.Name = "btnPlayInstrument";
+			this.btnPlayInstrument.Size = new System.Drawing.Size(75, 23);
+			this.btnPlayInstrument.TabIndex = 1;
+			this.btnPlayInstrument.Text = "Play";
+			this.btnPlayInstrument.UseVisualStyleBackColor = true;
+			this.btnPlayInstrument.Click += new System.EventHandler(this.btnPlayInstrument_Click);
 			// 
 			// frm2VariationEditor
 			// 
@@ -549,7 +550,7 @@
 		private System.Windows.Forms.ToolStripMenuItem miSaveAs;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Button btnPlay;
+		private System.Windows.Forms.Button btnPlayPart;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.GroupBox groupBox4;
 		private System.Windows.Forms.Label label4;
@@ -569,7 +570,7 @@
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private System.Windows.Forms.ColumnHeader columnHeader5;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnPlayInstrument;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.GroupBox groupBox5;
 		private ChordFamilySelector cfsChord;
