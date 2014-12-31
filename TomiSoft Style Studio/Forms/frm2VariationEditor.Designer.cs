@@ -30,9 +30,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
-			this.cfsChord = new TomiSoft_Style_Studio.ChordFamilySelector();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.isInstrument = new TomiSoft_Style_Studio.InstrumentSelector();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.rbPartEnding = new System.Windows.Forms.RadioButton();
 			this.rbPartFillToOriginal = new System.Windows.Forms.RadioButton();
@@ -67,6 +65,10 @@
 			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.btnPlayInstrument = new System.Windows.Forms.Button();
+			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.cfsChord = new TomiSoft_Style_Studio.ChordFamilySelector();
+			this.isInstrument = new TomiSoft_Style_Studio.InstrumentSelector();
 			this.menuStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -77,6 +79,7 @@
 			this.panel2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.groupBox3.SuspendLayout();
+			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -102,12 +105,14 @@
 			// 
 			// miSave
 			// 
+			this.miSave.Image = global::TomiSoft_Style_Studio.Properties.Resources.save_16xLG;
 			this.miSave.MergeAction = System.Windows.Forms.MergeAction.Insert;
 			this.miSave.MergeIndex = 2;
 			this.miSave.Name = "miSave";
 			this.miSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
 			this.miSave.Size = new System.Drawing.Size(193, 22);
 			this.miSave.Text = "Save";
+			this.miSave.Click += new System.EventHandler(this.miSave_Click);
 			// 
 			// miSaveAs
 			// 
@@ -118,6 +123,7 @@
             | System.Windows.Forms.Keys.S)));
 			this.miSaveAs.Size = new System.Drawing.Size(193, 22);
 			this.miSaveAs.Text = "Save as...";
+			this.miSaveAs.Click += new System.EventHandler(this.miSave_Click);
 			// 
 			// panel1
 			// 
@@ -152,13 +158,6 @@
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Chord family";
 			// 
-			// cfsChord
-			// 
-			this.cfsChord.Location = new System.Drawing.Point(6, 19);
-			this.cfsChord.Name = "cfsChord";
-			this.cfsChord.Size = new System.Drawing.Size(48, 64);
-			this.cfsChord.TabIndex = 0;
-			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.isInstrument);
@@ -168,13 +167,6 @@
 			this.groupBox2.TabIndex = 5;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Instruments";
-			// 
-			// isInstrument
-			// 
-			this.isInstrument.Location = new System.Drawing.Point(3, 16);
-			this.isInstrument.Name = "isInstrument";
-			this.isInstrument.Size = new System.Drawing.Size(62, 186);
-			this.isInstrument.TabIndex = 0;
 			// 
 			// groupBox7
 			// 
@@ -508,6 +500,43 @@
 			this.btnPlayInstrument.UseVisualStyleBackColor = true;
 			this.btnPlayInstrument.Click += new System.EventHandler(this.btnPlayInstrument_Click);
 			// 
+			// toolStrip1
+			// 
+			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+			this.toolStrip1.Location = new System.Drawing.Point(200, 0);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Size = new System.Drawing.Size(627, 25);
+			this.toolStrip1.TabIndex = 3;
+			this.toolStrip1.Text = "toolStrip1";
+			this.toolStrip1.Visible = false;
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton1.Image = global::TomiSoft_Style_Studio.Properties.Resources.save_16xLG;
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.MergeAction = System.Windows.Forms.MergeAction.Insert;
+			this.toolStripButton1.MergeIndex = 2;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton1.Text = "Save";
+			this.toolStripButton1.Click += new System.EventHandler(this.miSave_Click);
+			// 
+			// cfsChord
+			// 
+			this.cfsChord.Location = new System.Drawing.Point(6, 19);
+			this.cfsChord.Name = "cfsChord";
+			this.cfsChord.Size = new System.Drawing.Size(48, 64);
+			this.cfsChord.TabIndex = 0;
+			// 
+			// isInstrument
+			// 
+			this.isInstrument.Location = new System.Drawing.Point(3, 16);
+			this.isInstrument.Name = "isInstrument";
+			this.isInstrument.Size = new System.Drawing.Size(62, 186);
+			this.isInstrument.TabIndex = 0;
+			// 
 			// frm2VariationEditor
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +544,7 @@
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.ClientSize = new System.Drawing.Size(827, 581);
+			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.menuStrip1);
@@ -537,6 +567,8 @@
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -588,5 +620,7 @@
 		private System.Windows.Forms.RadioButton rbArrangementBasic;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button btnDeleteSelectedMessage;
+		private System.Windows.Forms.ToolStrip toolStrip1;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
 	}
 }

@@ -76,18 +76,6 @@ namespace TomiSoft_Style_Studio {
 			this.OnSelectedPartChanged();
 		}
 
-		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
-			Application.Exit();
-		}
-
-		private void newStyleToolStripMenuItem_Click(object sender, EventArgs e) {
-			
-		}
-
-		private void openStyleToolStripMenuItem_Click(object sender, EventArgs e) {
-			
-		}
-
 		private void OnStyleLoaded() {
 			miSave.Enabled = true;
 			miSaveAs.Enabled = true;
@@ -180,6 +168,15 @@ namespace TomiSoft_Style_Studio {
 			MidiPlaybackDialog dlg = new MidiPlaybackDialog(this.Data.Measure, this.Data.Tempo, Result);
 			dlg.Show(this);
 			dlg.Play();
+		}
+
+		private void miSave_Click(object sender, EventArgs e) {
+			MessageBox.Show(
+				"Not implemented yet",
+				"Error",
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Error
+			);
 		}
 	}
 }
