@@ -1,6 +1,11 @@
 TomiSoft Roland Style Studio
 ============================
 A software for creating and editing style files for Roland arranger keyboards.
+This project is rudimentary with not much functionality!
+
+Screenshots
+===========
+![In action](http://kepfeltoltes.hu/141231/480363909N_vtelen_www.kepfeltoltes.hu_.png)
 
 Requirements
 ============
