@@ -137,9 +137,9 @@
     <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageScheduler.cs" />
-    <Compile Include="MidiMessagePlayer.cs" />
-    <Compile Include="MidiOutputHandler.cs" />
+    <Compile Include="MidiOut Handling\MessageScheduler.cs" />
+    <Compile Include="MidiOut Handling\MidiMessagePlayer.cs" />
+    <Compile Include="MidiOut Handling\MidiOutputHandler.cs" />
     <Compile Include="Forms\Dialogs\MidiPlaybackDialog.cs">
       <SubType>Form</SubType>
     </Compile>

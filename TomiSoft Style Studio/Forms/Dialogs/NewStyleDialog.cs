@@ -54,7 +54,9 @@ namespace TomiSoft_Style_Studio {
 			});
 			cbMeasure.SelectedIndex = 4;
 
-			tbTempo.Text = "100";
+			nudTempo.ValueChanged += (o, e) => this.tempo = Convert.ToInt32(nudTempo.Value);
+
+			nudTempo.Value = 100;
 		}
 
 		private void btnCreate_Click(object sender, EventArgs e) {
@@ -72,24 +74,6 @@ namespace TomiSoft_Style_Studio {
 			else if (tbName.Text.Length >= 16) {
 				Error("The style's name must be equal or less than 16 characters");
 				return false;
-			}
-
-			if (tbTempo.Text == String.Empty) {
-				Error("You must specity the style's tempo");
-				return false;
-			}
-			else {
-				try {
-					this.tempo = Convert.ToInt32(tbTempo.Text);
-					if (tempo < 30 || tempo > 255) {
-						Error("Tempo must be between 30 and 255");
-						return false;
-					}
-				}
-				catch (FormatException) {
-					Error("The tempo must be an integer between 30 and 255");
-					return false;
-				}
 			}
 
 			return true;

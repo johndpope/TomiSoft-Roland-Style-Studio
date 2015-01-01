@@ -27,7 +27,6 @@
 			this.cbMeasure = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.tbTempo = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.tbName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -37,16 +36,18 @@
 			this.rb2Var = new System.Windows.Forms.RadioButton();
 			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.nudTempo = new System.Windows.Forms.NumericUpDown();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudTempo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.nudTempo);
 			this.groupBox1.Controls.Add(this.cbMeasure);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.label3);
-			this.groupBox1.Controls.Add(this.tbTempo);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.tbName);
 			this.groupBox1.Controls.Add(this.label1);
@@ -83,13 +84,6 @@
 			this.label3.TabIndex = 4;
 			this.label3.Text = "BPM";
 			// 
-			// tbTempo
-			// 
-			this.tbTempo.Location = new System.Drawing.Point(74, 48);
-			this.tbTempo.Name = "tbTempo";
-			this.tbTempo.Size = new System.Drawing.Size(68, 20);
-			this.tbTempo.TabIndex = 3;
-			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
@@ -102,6 +96,7 @@
 			// tbName
 			// 
 			this.tbName.Location = new System.Drawing.Point(74, 19);
+			this.tbName.MaxLength = 16;
 			this.tbName.Name = "tbName";
 			this.tbName.Size = new System.Drawing.Size(100, 20);
 			this.tbName.TabIndex = 1;
@@ -180,6 +175,28 @@
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
+			// nudTempo
+			// 
+			this.nudTempo.Location = new System.Drawing.Point(74, 49);
+			this.nudTempo.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+			this.nudTempo.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+			this.nudTempo.Name = "nudTempo";
+			this.nudTempo.Size = new System.Drawing.Size(68, 20);
+			this.nudTempo.TabIndex = 6;
+			this.nudTempo.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			// 
 			// frmNewStyle
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +217,7 @@
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudTempo)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -210,7 +228,6 @@
 		private System.Windows.Forms.ComboBox cbMeasure;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox tbTempo;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox tbName;
 		private System.Windows.Forms.Label label1;
@@ -220,5 +237,6 @@
 		private System.Windows.Forms.RadioButton rb2Var;
 		private System.Windows.Forms.Button btnCreate;
 		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.NumericUpDown nudTempo;
 	}
 }

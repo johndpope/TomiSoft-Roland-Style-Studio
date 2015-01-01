@@ -42,7 +42,6 @@ namespace TomiSoft_Style_Studio {
 			if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
 				Form frmEditor = new frm2VariationEditor(dlg.FileName);
 				frmEditor.MdiParent = this;
-				frmEditor.WindowState = FormWindowState.Maximized;
 				frmEditor.Show();
 			}
 		}
@@ -51,10 +50,9 @@ namespace TomiSoft_Style_Studio {
 			frmNewStyle dlg = new frmNewStyle();
 			if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
 				if (dlg.Format == StyleFileFormat.Var2_STL) {
-					frm2VariationEditor frm = new frm2VariationEditor(dlg.StyleName, dlg.Tempo, dlg.Measure);
-					frm.MdiParent = this;
-					frm.WindowState = FormWindowState.Maximized;
-					frm.Show();
+					frm2VariationEditor frmEditor = new frm2VariationEditor(dlg.StyleName, dlg.Tempo, dlg.Measure);
+					frmEditor.MdiParent = this;
+					frmEditor.Show();
 				}
 			}
 		}
